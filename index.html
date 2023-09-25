@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href = "css/calculator.css">
+  <link rel="stylesheet" href = "css/stopWatch.css">
+  <link rel="stylesheet" href = "/snake-game/snakeStyle.css">
+  <link rel="stylesheet" href = "css/todoList.css">
+  <link rel="stylesheet" href="css/weather.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+   integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Home-app</title>
+</head>
+<body>
+  
+ <div class="app">
+   <div class="active-tool">
+    <div class="snake-container">
+      <div class="startGameDisplay">Snake
+        <p>Press any key button to start</p>
+      </div>
+      <div class="gameOverDisplay">Game Over
+      <p class="instruction">Press SPACE BAR to continue</p>
+      </div> 
+      <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+    </div>
+
+    <div class="calculator" id="calculator">
+     
+      <div id="secondaryDisplay"></div>
+      <div id="display">0</div>
+      <button id="clear" onclick="clearDisplay()">AC</button>
+      <button id="minusPlus" onclick="updateDisplay('negative-value')">+/-</button>
+      <button id="decimal" onclick="updateDisplay('percent')">%</button>
+      <button id="divide" onclick="updateDisplay('divide')">÷</button><br>
+      <button id="seven" onclick="updateDisplay(7)">7</button>
+      <button id="eight" onclick="updateDisplay(8)">8</button>
+      <button id="nine" onclick="updateDisplay(9)">9</button>
+      <button id="multiply" onclick="updateDisplay('multiply')">X</button>
+      <button id="four" onclick="updateDisplay(4)">4</button>
+      <button id="five" onclick="updateDisplay(5)">5</button>
+      <button id="six" onclick="updateDisplay(6)">6</button>
+      <button id="subtract" onclick="updateDisplay('subtract')">-</button>
+      <button id="one" onclick="updateDisplay(1)">1</button>
+      <button id="two" onclick="updateDisplay(2)">2</button>
+      <button id="three" onclick="updateDisplay(3)">3</button>
+      <button id="add" onclick="updateDisplay('add')">+</button>
+      <button id="zero" onclick="updateDisplay(0)">0</button>
+      <button id="decimal" onclick="updateDisplay('decimal')">.</button>
+      <button id="equals" onclick="updateDisplay('equals')">=</button>
+    </div>
+
+
+    
+    <div class ="stopwatch-container">
+      <p class = "timer">00:00:00</p>
+
+      <div class= "button-container">
+        <button class = "play"><i class="fa-solid fa-play"></i></button>
+        <button class = "replay"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+      </div>
+ 
+
+    </div>
+    
+    <div class="todo-container" id="todo">
+         <div class="todo-container-top">
+            <h2>REMINDERS</h2>
+            <i id= "sun-moon" class="fa-solid fa-moon"></i>
+              
+        </div>
+        <div class="todo-input">
+          <input class="user-input" type="text" placeholder="Create a new todo..."><button  id = "submit-btn" >Submit</button>
+          </div>
+          <div class="todo-box">
+            <ul class="list-container"></ul>
+      
+              <div class="list-count">
+                <div class="count">
+                </div>
+              </div>
+    
+          </div>
+              
+          <div class="todo-footer">
+            <ul class="todo-option">
+              <option value="all">All</option>
+              <option value="active">Active</option>
+              <option value="completed">Completed</option>
+            </ul>
+          </div>
+    
+    </div>   
+  
+  </div> 
+
+ 
+  <div class="overlay">   
+         
+   </div>
+   
+    <div class="active-box">
+    </div>
+  <div class="clock-container">
+    <div class="clock">
+    <p class="watch">00:00 </p><p class ="pm-am">PM</p>
+    </div>
+    <p class="date">Sunday, March 19</p>
+  </div>
+  <section class= "tool-section">
+    <div class = 'title hiddenText showText'>Tools</div>
+  <div class="box-container">
+      <div class="box one">
+        <div class="border">
+          <div class="box-icon tool-one" id="tool">
+            <i class="fa-solid fa-calculator tool-logo"> </i>
+          </div>
+         
+       
+        </div>
+          
+        <div class="box-title">Calculator</div>
+      </div>
+    
+    <div class="box two">
+      <div class="border">
+         <div class="box-icon tool-two" id="tool">
+          <i class="fa-solid fa-stopwatch tool-logo" alt="Stopwatch icon"></i>
+         </div>
+      </div>
+          <div class="box-title">Stopwatch</div>
+      </div>
+    <div class="box three">
+      <div class="border">
+         <div class="box-icon tool-three" id="tool" >
+          <i class="fa-regular fa-calendar-check tool-logo" alt ="todo-list logo"></i>
+         </div>
+      </div>
+          <div class="box-title">Reminders</div>
+      </div>
+    <div class="box four">
+      <div class="border">
+         <div class="box-icon tool-four" id="tool" >
+          <i class="fa-solid fa-gamepad tool-logo" alt ="game logo"></i></i>
+         </div>
+      </div>
+          <div class="box-title">Snake Game</div>
+      </div>
+   
+    <div class="box five">
+      <div class="border">
+         <div class="box-icon">+</div>
+      </div>
+          <div class="box-title"></div>
+      </div>
+    
+    <div class="box six">
+      <div class="border">
+         <div class="box-icon">+</div>
+      </div>
+          <div class="box-title"></div>
+    </div>
+  </div>
+    </section>
+  <div class = 'title hiddenText showText'>Weather</div>
+    <div class="weather-data">
+      <ul class="weather-cards">
+        <li class="card">
+          <div class="card-content">
+          <h3>(Now)</h3>
+          <h6>Temp: 84°F</h6>
+          <h6>Wind: 5mph</h6>
+          <h6>Humidity: 73%</h6>
+        </div>
+          <i class="fa-solid fa-cloud-sun weather-logo"></i>
+        </li>
+        <li class="card">
+          <div class="card-content">
+          <h3>(7PM)</h3>
+          <h6>Temp: 83°F</h6>
+          <h6>Wind: 5mph</h6>
+          <h6>Humidity: 71%</h6>
+          </div>  
+          <i class="fa-solid fa-cloud-sun weather-logo"></i>
+        </li>
+        </li>
+        <li class="card">
+          <div class="card-content">
+          <h3>(7:28PM)</h3>
+          <h6>Temp: 82°F</h6>
+          <h6>Wind: 3mph</h6>
+          <h6>Humidity: 70%</h6>
+          </div>
+          <i class="fa-solid fa-cloud weather-logo"></i>
+        </li>
+        </li>
+        <li class="card">
+          <div class="card-content">
+          <h3>(8PM)</h3>
+          <h6>Temp: 81°F</h6>
+          <h6>Wind: 3mph</h6>
+          <h6>Humidity: 69%</h6>
+        </div>
+        <i class="fa-solid fa-cloud-rain weather-logo"></i>
+        </li>
+        </li>
+        <li class="card">
+          <div class="card-content">
+          <h3>(9PM)</h3>
+          <h6>Temp: 81°F</h6>
+          <h6>Wind: 3mph</h6>
+          <h6>Humidity: 69%</h6>
+        </div>
+        <i class="fa-solid fa-cloud-rain weather-logo"></i>
+        </li>
+        </li>
+      </ul>
+    </div>
+<div class = 'title hiddenText showText'>Places to go</div>
+    <section class="recommendation">
+      <div class="togo-box">
+    <div class="togo togo-one"><iframe class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.6870693475935!2d-80.07934192583512!3d26.40129578188376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8e1ca871bea09%3A0xa71d3934fab06925!2sDorsia%20Restaurant!5e0!3m2!1sen!2sus!4v1694915329126!5m2!1sen!2sus"
+       width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+      
+       <div class="togo-box">
+    <div class="togo togo-two">
+      <img class = 'picOne' src="./images/food-5981232_1280.jpg" alt="food">
+    </div>
+        </div>
+      
+<div class="togo-box">
+    <div class="togo togo-three">
+      <img class = 'picOne' src="./images/pizza-2589575_1280.jpg" alt="pizza">
+
+
+    </div>
+        </div>
+      
+      <div class="togo-box">
+    <div class="togo togo-four">
+      <img class = 'picOne' src="./images/restaurant-4011989_1280.jpg" alt="restaurant_pic">
+
+    </div>
+        </div>
+  </section>
+ 
+   </div>
+</body>
+<script src="/js/clock.js"></script>
+<script src="/js/app.js"></script>
+<script src ="/js/stopWatch.js"></script>
+<script src ="/js/calculator.js"></script>
+<script src ="/js/todoList.js"></script>
+<script src ="/js/weather.js"></script>
+<script src ="/snake-game/snakeScript.js"></script>
+
+
+</html>

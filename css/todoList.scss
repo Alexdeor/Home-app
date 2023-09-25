@@ -1,0 +1,263 @@
+:root{
+--bg-color: hsl(235, 21%, 11%);
+--todo-bg-color: hsl(137, 51%, 22%);
+--todo-bg-light-color: hsl(234, 39%, 85%);
+--dark-font-color: hsl(233, 14%, 35%);
+--light-bg-color: hsl(0, 0%, 98%);
+
+}
+
+#submit-btn{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2px;
+    padding: .25em;
+    margin: .25em;
+    cursor: pointer;
+  background-color: transparent;
+}
+#submit-btn:hover{
+    color: black;
+
+    background-color:var(--light-bg-color);
+}
+.background-top{
+width: 100%;
+background-image: url(../images/milky-way-2695569_1280.jpg);
+background-size: cover;
+height: 40vh;
+img{
+    width: 100%;
+    height: 30vh;
+
+}
+
+}
+body{
+    display: grid;
+   background-color:var(--bg-color);
+   justify-items: center ;
+   font-size: 18px;
+   font-weight: 400px;
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+.todo-container{
+    transition: 1s;
+    width: 90%;
+    max-height: 500px;
+    position: absolute;
+}
+.todo-input,.list-count,.reminder{
+display: flex;
+align-items: center;
+width: 100%;
+background-color: var(--todo-bg-color);
+
+}
+.todo-input, .reminder{
+    border-radius: 5px;
+
+}
+.reminder{
+    width: 80%;
+}
+.list-count{
+justify-content: space-between;
+font-size: 15px;
+color:var(--dark-font-color);
+p{
+    margin: .5em;
+}
+}
+
+
+.user-input{
+    color: var(--light-bg-color);
+    background-color: var(--todo-bg-color);
+    border: none;
+    height: 100%;
+    width: 80%;
+    outline-style: none;
+    font-size: 18px;
+    box-shadow: none;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    padding-left: .75em;
+    border-color: transparent;
+} 
+.cross{
+    width: 3%;
+}
+.user-list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--todo-bg-color);
+    border-bottom: solid .1px rgba(255, 255, 255, 0.292) ;
+}
+.todo-box{
+    padding: .2em 0 .3em 0;
+    border-radius:5px;
+    margin-top: .75em;
+
+}
+.todo-container-top{
+    
+    margin: 2em 0 2em 0;
+    display: flex;
+    color:white;
+    align-items: center;
+    justify-content:space-between ;
+    h2{
+        letter-spacing: .25em;
+
+    }
+}
+.todo-box{
+    background-color: var(--todo-bg-color);
+}
+#sun-moon{
+    cursor: pointer;
+    margin: 0;
+    width: 26px;
+    height: 25px;
+
+}
+.count,li,.clear,.cross{
+    cursor: pointer;
+}
+.mark{
+    text-decoration: line-through;
+
+   color: rgba(255, 255, 255, 0.402);
+}
+.check-mark{
+    color: rgba(255, 255, 255, 0.402);
+
+}
+.btn, .check{
+    margin: .45em;
+    background-color: var(--todo-bg-color);
+   
+    cursor: pointer;
+}
+
+.todo-footer{
+margin: .75em 0 3em 0;
+border-radius: 5px;
+
+background-color: var(--todo-bg-color);
+ul{
+    justify-content: center;
+    padding: .5em;
+    display: flex;
+li{
+    color: var(--dark-font-color);
+    list-style-type: none;
+    margin: .75em;
+}
+}
+}
+option{
+    padding: .5em;
+}
+option:hover{
+    color: rgb(50, 50, 50);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+//switch theme
+
+
+.count{
+padding: 1em;
+}
+.todo-input-light{
+    height: 70%;
+    width: 100%;
+    border-radius: 5px;
+    justify-items: center;
+    background-color: var(--todo-bg-light-color);
+    button{
+        margin: .5em;
+    }
+    input{
+        
+        width: 50%;
+        background-color: var(--todo-bg-color);
+        border: none;
+        margin: 1em;
+      
+    } 
+    
+    }
+.bg-light{
+background-image: url(../images/trees-3294681_1280.jpg);
+width: 100%;
+background-size: cover;
+height: 40vh;
+}
+option{
+    cursor: pointer;
+}
+body.light{
+background-color: var(--todo-bg-light-color);
+
+}
+.todo-box-light{
+    background-color: var(--todo-bg-light-color);
+}
+.todo-box-light{
+background-color: var(--todo-bg-light-color);
+}
+.user-input-light{
+    color: var(--light-bg-color);
+    background-color: var(--todo-bg-color);
+    border: none;
+    height: 100%;
+    width: 80%;
+    outline-style: none;
+    font-size: 18px;
+box-shadow: none;
+border-color: transparent;
+} 
+.todo-box-light{
+    background-color:var(--light-bg-color);
+}
+.todo-footer-light{
+    margin: .75em 0 3em 0;
+    border-radius: 5px;
+    
+    background-color: var(--light-bg-color);
+    ul{
+        justify-content: center;
+        display: flex;
+    li{
+        color: var(--dark-font-color);
+        list-style-type: none;
+        margin: .75em;
+    }
+    }
+    }
+
+    @media only screen and (min-width: 620px) {
+        .background-top{
+            background-image: url(../images/milky-way-2695569_1280.jpg);
+            background-size: cover;
+        }
+        .bg-light{
+            background-image: url(../images/trees-3294681_1280.jpg);
+             background-size: cover;
+
+            }
+    
+}
+    @media only screen and (min-width: 620px) {
+
+        .todo-container{
+            width: 40vw;
+        }
+    
+}

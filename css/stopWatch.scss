@@ -1,0 +1,52 @@
+
+
+  .stopwatch-container{
+    height: 50% ;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    background-color: black;
+    color: white;
+    justify-items:center;
+    border-radius: 20px;
+  
+  }
+  .play, .replay{
+    cursor: pointer;
+    border: none;
+    padding: .25em;
+      transition: .5s;
+  
+    
+  }
+  .play{
+    background-color: green;
+  
+  }
+  .timer-container{
+    padding: .25em;
+  }
+  .timer{
+    width: 300px;
+    padding: .5em 1em 0em;
+  }
+  .replay{
+    background-color: red;
+  }
+  i{
+    color: white;
+    font-size: 25px;
+  }
+  .button-container{
+    padding: 0em 1em .5em;
+
+  }
+  
+  .play:hover{
+    background-color: #6a956a;
+    transition: 200ms
+  }
+  .replay:hover{
+    background-color: #e26666de;
+    transition: 200ms
+  }

@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+body {
+  display: grid;
+  justify-items: center;
+}
+
+.app {
+  width: 100%;
+  background-image: url(/images/lake-4442337_1280\ 1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.tool-logo {
+  display: grid;
+  position: relative;
+  pointer-events: none;
+  font-size: 60px;
+  color: #002412;
+}
+
+.togo-two, .togo-three, .togo-four {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.picOne, .picThree {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: 95%;
+}
+
+.picTwo {
+  width: 100%;
+  height: 100%;
+}
+
+.weather-logo {
+  display: grid;
+  align-self: center;
+  font-size: 60px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.clock-container {
+  padding: 2.5em;
+  font-size: 36px;
+}
+
+.clock {
+  display: flex;
+}
+
+.watch {
+  font-size: 96px;
+}
+
+.pm-am {
+  display: grid;
+  align-content: end;
+  padding: 0em 0em 0.4em;
+}
+
+.title {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5em;
+  padding: 1.5em;
+  font-weight: bold;
+}
+
+.title::before {
+  content: " ";
+  position: absolute;
+  z-index: 3;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(80, 92, 30, 0.6980392157);
+}
+
+.box-container {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 2em;
+}
+
+.box {
+  display: grid;
+  position: relative;
+  align-content: end;
+  margin: 1em;
+  border-radius: 20px;
+  height: 190px;
+  color: white;
+}
+
+.box-icon {
+  position: absolute;
+  display: grid;
+  background-color: rgba(179, 174, 132, 0.4274509804);
+  height: 80%;
+  width: 100%;
+  top: 0;
+  align-content: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.border {
+  height: 180px;
+}
+
+.border:hover .box-icon {
+  transition: 500ms;
+  background-color: rgba(255, 255, 255, 0.582);
+  top: -10px;
+}
+
+.togo {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  background-color: rgba(179, 174, 132, 0.4274509804);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  align-content: center;
+  border-radius: 20px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.togo-box:hover .togo {
+  transition: 500ms;
+  background-color: rgba(255, 255, 255, 0.582);
+  top: -10px;
+}
+
+.togo-box {
+  display: grid;
+  position: relative;
+  align-content: end;
+  margin: 1em;
+  border-radius: 20px;
+  height: 400px;
+  color: white;
+}
+
+.recommendation {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 35%);
+  grid-gap: 2em;
+}
+
+.overlay {
+  display: grid;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+}
+
+.active-tool {
+  display: none;
+  overflow: scroll;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.189);
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 50%;
+  height: 90%;
+  top: 5%;
+  left: 25%;
+  z-index: 6;
+}
+
+.hiddenText {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.showText {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
+@media only screen and (max-width: 1000px) {
+  .clock-container {
+    font-size: 25px;
+    padding: 2em;
+  }
+  .clock-container .watch {
+    font-size: 70px;
+  }
+  .recommendation {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-gap: 2em;
+  }
+  .box-container {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 2em;
+  }
+}
+@media only screen and (max-width: 419px) {
+  .clock-container {
+    font-size: 15px;
+    padding: 2em;
+  }
+  .clock-container .watch {
+    font-size: 70px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+.snake-container {
+  display: none;
+  text-align: center;
+}
+
+.gameOverDisplay {
+  font-family: "Courier New", Courier, monospace;
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  color: #000;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.611);
+  z-index: 10;
+}
+.gameOverDisplay .instruction {
+  font-size: 20px;
+}
+
+.startGameDisplay {
+  display: grid;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.611);
+}
+.startGameDisplay p {
+  font-size: 20px;
+}
+
+canvas {
+  position: relative;
+  z-index: -1;
+}/*# sourceMappingURL=snakeStyle.css.map */
