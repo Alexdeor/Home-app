@@ -15,7 +15,7 @@ function watch(){
   let hour = date.getHours();
   currentDate.innerText = weekDays[date.getDay()] + ', ' + monthNames[date.getMonth()] + ' ' + date.getDate();
   if(hour> 18 || hour <6){
-  background.style.backgroundImage = "url('/images/nature-3194001_1920.jpg')";
+  background.style.backgroundImage = "url('./images/nature-3194001_1920.jpg')";
   document.body.style.color = 'white';
  }
 //AM PM switch
