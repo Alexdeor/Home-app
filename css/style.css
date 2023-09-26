@@ -189,7 +189,7 @@ body {
 
 .active-tool {
   display: none;
-  overflow: scroll;
+  overflow: auto;
   border-radius: 5%;
   background-color: rgba(255, 255, 255, 0.189);
   justify-items: center;
