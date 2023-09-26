@@ -101,7 +101,7 @@
   display: grid;
   align-content: center;
   justify-content: center;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .weather-data .current-weather {
